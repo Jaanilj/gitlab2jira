@@ -1,6 +1,11 @@
-#!/usr/bin/env python3
+#!/usr/bin/env -S uv run --script
+# /// script
+# requires-python = ">=3.12"
+# dependencies = ["setuptools>=61.0.0"]
+# ///
 
-from setuptools import setup, find_packages
+
+from setuptools import setup
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
@@ -18,7 +23,6 @@ setup(
     classifiers=[
         "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
-        "License :: OSI Approved :: MIT License",
         "Operating System :: OS Independent",
         "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.12",
@@ -26,9 +30,6 @@ setup(
         "Topic :: Utilities",
     ],
     python_requires=">=3.12",
-    install_requires=[
-        "requests>=2.25.0,<3.0.0",
-    ],
     entry_points={
         "console_scripts": [
             "gitlab2jira=gitlab2jira:main",

@@ -1,0 +1,32 @@
+[project]
+name = "gitlab2jira"
+version = "1.0.0"
+description = "A command-line tool to create Jira tickets from GitLab merge requests"
+readme = "README.md"
+requires-python = ">=3.12"
+authors = [
+    {name = "GitLab to Jira CLI"}
+]
+license = "MIT"
+keywords = ["gitlab", "jira", "automation", "cli", "merge-request", "ticket"]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Tools",
+    "Topic :: Utilities",
+]
+dependencies = [
+    "colorama>=0.4.6",
+    "requests>=2.25.0,<3.0.0",
+]
+
+[project.urls]
+"Bug Reports" = "https://github.com/Jaanilj/gitlab2jira/issues"
+"Source" = "https://github.com/Jaanilj/gitlab2jira"
+"Documentation" = "https://github.com/Jaanilj/gitlab2jira#readme"
+
+[project.scripts]
+gitlab2jira = "gitlab2jira:main"
